@@ -1,3 +1,5 @@
 This software was used to represent in a graphic the results of fastANI
 The input file was a folde with all the genomes in fasta (.fna) format.
 
+We installed it with conda
+  $conda install -c bioconda -c conda-forge aniclustermap
