@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -j oe
+#PBS -q workq
+#PBS -m be
+#PBS -N cyano_checkM
+#PBS -l ncpus=6,mem=120gb
+#PBS -l walltime=744:00:00
+#PBS -S /bin/bash
+cd /home/bencyano/unlv/projects/p1_terres_cyano_genome/input_files/checkm_files
+module load conda
+conda activate checkm
+
+source activate /home/bencyano/.conda/envs/checkm/bin
+
+checkm lineage_wf MAG_cyano_quality_control checkm_out_cyano_genom
