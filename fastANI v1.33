@@ -1,0 +1,7 @@
+I downloaded fastANI through the wiki:
+   -> https://github.com/Ecogenomics/CheckM/wiki/Installation#how-to-install-checkm
+
+I wanted to analyze and make all vs all analysis of Average Nucleotide Identity. For this purpose I need to create a text file for file
+for the query and reference MAGs, in this case both files were the same. The name of the file was cyano_MAG_list.txt
+
+Also, I used the cherry-creek from UNLV to run this process
