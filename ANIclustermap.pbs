@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -j oe
+#PBS -q workq
+#PBS -m be
+#PBS -N cyano_cluster_ani
+#PBS -l ncpus=6,mem=120gb
+#PBS -l walltime=744:00:00
+#PBS -S /bin/bash
+cd /home/bencyano/unlv/projects/p1_terres_cyano_genome/input_files/ani_cluster_files
+module load conda
+conda activate fastANI
+
+source activate /home/bencyano/.conda/envs/fastANI/bin
+
+ANIclustermap -i cyano_mag_dataset/ -o cyano_mag_ani_cluster_ouput_1 --fig_width 40 --fig_height 35 --annotation
