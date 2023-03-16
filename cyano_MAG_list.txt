@@ -1,0 +1,9 @@
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Drouetiella_lurida_LUKESOVA_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Hormoscilla_sp_CMT-3BRIN-NPC48_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Oculatella_coburnii_WJT66-NPBG6A_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Phormidesmis_sp_WJT24-NPBG8_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Pleurocapsa_ercegoicii_ATA3-5Q-KO4_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Rexia_erecta_CAT4-SG4_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Roholtiella_mojaviensis_WJT36-NPBG5B_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Timaviella_radians_GSE-UNK-7R_genomic.fna
+/home/bencyano/unlv/bioprograms/FastANI-1.33/fastANI_files/GCA_Trichotorquatus_andrei_WJT9-NPBG15_genomic.fna
