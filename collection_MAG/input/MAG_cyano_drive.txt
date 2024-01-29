@@ -1,0 +1,2 @@
+Link to the Google Drive, this folder contains the 463 genomes of cyanobacteria in fasta file.
+https://drive.google.com/drive/folders/170VOaPHFpRRnJyAUN1rZqHFuhEIhfZ3_?usp=share_link
