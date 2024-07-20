@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -j oe
+#PBS -q workq
+#PBS -m be
+#PBS -N fastANI_15jul2024
+#PBS -l ncpus=8,mem=60gb
+#PBS -l walltime=300:00:00
+#PBS -S /bin/bash
+
+
+cd /storage/pietrasiaklab/Benjy_SH/project/project_1_evo_cyano_terr/input_files/quality_control_MGA/fastANI_v1_33/fastani_input
+
+
+/storage/pietrasiaklab/bioprograms/FastANI-1.33/fastANI --ql path_list_highq_cyano_mal_15jul2024.txt --rl path_list_highq_cyano_mal_15jul2024.txt -o fastANI_out_secondfilter_15jul2024.out --matrix

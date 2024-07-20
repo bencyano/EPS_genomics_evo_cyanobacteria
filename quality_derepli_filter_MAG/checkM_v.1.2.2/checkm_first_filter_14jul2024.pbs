@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -j oe
+#PBS -q workq
+#PBS -m be
+#PBS -N cyano_checkM_14jul2024
+#PBS -l ncpus=8,mem=120gb
+#PBS -l walltime=744:00:00
+#PBS -S /bin/bash
+cd /storage/pietrasiaklab/Benjy_SH/project/project_1_evo_cyano_terr/input_files/quality_control_MGA/checkm/checkm_input
+module load conda
+conda activate checkm
+
+source activate /home/bencyano/.conda/envs/checkm/bin
+
+checkm lineage_wf checkm_cyano_mal_mag_952 checkm_out_14jul2024
+
+
