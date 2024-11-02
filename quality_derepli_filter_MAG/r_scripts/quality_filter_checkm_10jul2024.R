@@ -22,6 +22,8 @@ View(first_qfilter_data)
 #medium_q->116
 #no_classfied->13
 
+##2.3.Save the update table in excel format-----
+write.csv(first_qfilter_data, file = "first_qfilter_data.csv")
 #3.Create the plot-----
 ##3.1.Create a plot with all the point-----
 checkm_plot_total <- ggplot(data= first_qfilter_data, aes(x=completeness, y = contamination, fill = quality))+
@@ -37,14 +39,19 @@ checkm_plot_total <- ggplot(data= first_qfilter_data, aes(x=completeness, y = co
         axis.text = element_text(face = "bold", size = 10),
         axis.ticks.x=element_blank(),
         axis.line = element_line(linetype = "solid", size = 0.8))+
-  theme(legend.position = c(0.35, 0.85),
+  theme(legend.position = c(0.35, 0.80),
         legend.background = element_rect(fill = "white"),
-        legend.title = element_blank())+
+        legend.title = element_blank(),
+        legend.text = element_text(size = 7))+
   annotate("rect", xmin=50, xmax=100, ymin=0, ymax=5, alpha=0, fill="white", col = "black", linetype = "dashed")#create a rectangle in th plot
 
 ###3.1.1.Save the plot-----
 ggsave("checkm_plot_total_14jul2024.pdf", plot = checkm_plot_total, width =150, height =100 , units  = "mm", limitsize = FALSE)
 ggsave("checkm_plot_total_14jul2024.tiff", plot = checkm_plot_total, width =200, height =200 ,  units = "mm", limitsize = FALSE)
+
+
+##3.2.Save the plot as a rds object-----
+saveRDS(checkm_plot_total, file = "checkm_plot_total_25sep2024.RDS")
 
 ##3.2.Create the plot with all the points higher than 50 and 10-----
 checkm_plot_selected <- ggplot(data= first_qfilter_data, aes(x=completeness, y = contamination, fill = quality))+
@@ -68,6 +75,9 @@ checkm_plot_selected <- ggplot(data= first_qfilter_data, aes(x=completeness, y =
 ###3.2.1.Save the plot-----
 ggsave("checkm_plot_selected _14jul2024.pdf", plot = checkm_plot_selected , width =150, height =100 , units  = "mm", limitsize = FALSE)
 
+##3.3.Save the plot as a rds object-----
+saveRDS(checkm_plot_selected, file = "checkm_plot_selected_25sep2024.RDS")
+
 #4.Merge the plots-----
 quality_filter_14jul2024 <- ggarrange(checkm_plot_total, checkm_plot_selected,
                     labels = c("A", "B"),
@@ -75,3 +85,15 @@ quality_filter_14jul2024 <- ggarrange(checkm_plot_total, checkm_plot_selected,
 
 ##4.1.Save the merged plots-----
 ggsave("checkm_quality_filter_14jul2024.pdf", plot = quality_filter_14jul2024 , width =200, height =150 , units  = "mm", limitsize = FALSE)
+
+
+#5.Get the accesion numbers with high quality-----
+##5.1.Filter the table to get only the high_q related data-----
+first_qfilter_highq_data <- first_qfilter_data %>% filter(quality == "high_q")
+View(first_qfilter_highq_data)
+
+##5.2.Create an object that contains the accession number of the high quality data----
+checkm_firstfilter_accesionnumber <- first_qfilter_highq_data$accesion_number
+
+##5.2.Create a text file with the accession number of the high quality data-----
+write(checkm_firstfilter_accesionnumber, file = "checkm_firstfilter_accesionnumber.txt")
