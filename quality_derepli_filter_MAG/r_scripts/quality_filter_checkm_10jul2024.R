@@ -5,7 +5,7 @@ library(dplyr) #mutate function
 library(ggpubr)
 
 #2.Import the table of completeness and contamination data-----
-first_qfilter_data <- read_xlsx("~/Downloads/Table S2-Quality control MAGs.xlsx", sheet = "Table S2-A")
+first_qfilter_data <- read_xlsx("~/Downloads/Table S2-Quality control and dereplication MAGs.xlsx", sheet = "Table S2a")
 View(first_qfilter_data)
 ##2.1.Create another column about the quality of each column-----
 first_qfilter_data <- first_qfilter_data %>% 
