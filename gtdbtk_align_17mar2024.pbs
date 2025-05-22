@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -j oe
+#PBS -q workq
+#PBS -m be
+#PBS -N gtdb_align_17mar2024
+#PBS -l ncpus=8,mem=120gb
+#PBS -l walltime=744:00:00
+#PBS -S /bin/bash
+
+
+module load conda
+conda activate /storage/hedlundlab/dengxun/software/conda/envs/gtdbtk-2.3.2
+cd /storage/pietrasiaklab/Benjy_SH/project/project_1_evo_cyano_terr/input_files/gtdbtk_align
+gtdbtk align --cpus 8 --identify_dir gtdbtk_identify_output_15mar2024/ --out_dir gtdbtk_align_output_17mar2024 --debug
